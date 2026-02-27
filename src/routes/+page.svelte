@@ -1,8 +1,6 @@
 <script lang="ts">
 	import PhaseSection from '$lib/components/PhaseSection.svelte';
-	import WeekPlan from '$lib/components/WeekPlan.svelte';
-	import TipGrid from '$lib/components/TipGrid.svelte';
-	import { phases, principles, sampleWeek, tips } from '$lib/data/exercises';
+	import { phases, principles } from '$lib/data/exercises';
 </script>
 
 <svelte:head>
@@ -39,12 +37,6 @@
 {#each phases as phase}
 	<PhaseSection {phase} />
 {/each}
-
-<div class="section-divider"></div>
-
-<WeekPlan schedule={sampleWeek} />
-
-<TipGrid {tips} />
 
 <footer class="footer-note">
 	<p>
@@ -129,12 +121,6 @@
 		flex-shrink: 0;
 		font-weight: 700;
 		color: var(--yellow);
-	}
-
-	.section-divider {
-		height: 1px;
-		background: var(--border);
-		margin: 2.5rem 0;
 	}
 
 	.footer-note {

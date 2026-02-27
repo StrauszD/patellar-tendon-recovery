@@ -1,7 +1,14 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
+	import Nav from '$lib/components/Nav.svelte';
+	import { loadTracker } from '$lib/stores/tracker.svelte';
+	import { onMount } from 'svelte';
 
 	let { children }: { children: Snippet } = $props();
+
+	onMount(() => {
+		loadTracker();
+	});
 </script>
 
 <svelte:head>
@@ -11,6 +18,7 @@
 	/>
 </svelte:head>
 
+<Nav />
 {@render children()}
 
 <style>
