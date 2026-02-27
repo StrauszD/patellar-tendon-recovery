@@ -3,6 +3,7 @@
 
 	const tabs = [
 		{ href: '/', label: 'Protocol' },
+		{ href: '/running', label: 'Running' },
 		{ href: '/tips', label: 'Tips' }
 	];
 </script>

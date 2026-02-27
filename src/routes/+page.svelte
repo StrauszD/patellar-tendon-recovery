@@ -34,7 +34,7 @@
 	{/each}
 </div>
 
-{#each phases as phase}
+{#each phases.filter(p => p.id !== 'phase-run') as phase}
 	<PhaseSection {phase} />
 {/each}
 
